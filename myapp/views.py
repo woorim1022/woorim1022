@@ -15,8 +15,8 @@ def multi(request):
 
 
 def myresume(request):
-    fname = request.GET.get('fname','')
-    lname = request.GET.get('lname','')
-    gender = request.GET.get('gender','')
-    text = request.GET.get('text','')
+    fname = request.POST.get('fname','')
+    lname = request.POST.get('lname','')
+    gender = request.POST.get('gender','')
+    text = request.POST.get('text','')
     return render(request, 'myresume.html', {'fname':fname,'lname':lname,'gender':gender,'text':text})
